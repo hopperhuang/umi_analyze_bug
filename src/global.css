@@ -1,0 +1,18 @@
+/* 引入normalize css */
+@import '~normalize.css';
+
+body {
+  background-color: rgba(248,248,248,1) !important;
+}
+
+/* 满屏显示 */
+html, body { 
+  margin:0;
+  height:100%; 
+}
+#base_layout{
+  height: 100%;
+}
+#root {
+  height: 100%;
+}

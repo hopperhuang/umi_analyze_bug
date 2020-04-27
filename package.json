@@ -1,0 +1,54 @@
+{
+  "name": "myshow-professional-h5",
+  "private": true,
+  "sideEffects": [
+    "./src/global.js",
+    "./src/api/polyfill.js",
+    "*.css",
+    "*.less"
+  ],
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "lint": "eslint {src,mock}/**/*.{js,jsx} --fix",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@antv/data-set": "^0.11.4",
+    "@antv/f2": "^3.6.3",
+    "@dp/knb": "^1.7.0",
+    "antd-mobile": "^2.3.1",
+    "normalize.css": "^8.0.1",
+    "rc-form": "^2.4.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "umi-hd": "^5.0.1",
+    "umi-request": "^1.2.19"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "react-test-renderer": "^16.7.0",
+    "umi": "^2.7.7",
+    "umi-plugin-react": "^1.8.4",
+    "vconsole-webpack-plugin": "^1.5.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

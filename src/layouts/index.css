@@ -1,0 +1,10 @@
+
+.normal {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+}
+.base_layout {
+  font-size: 16px;
+  width: 100%;
+  /* overflow-x: hidden; */
+}

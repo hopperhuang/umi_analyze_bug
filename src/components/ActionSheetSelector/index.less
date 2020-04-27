@@ -1,0 +1,56 @@
+.selector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,1);
+}
+.selector_cancel_confirm {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:17px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  padding: 0 17px;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+}
+.selector_cancel {
+  color:rgba(149,149,149,1);
+}
+.selector_confirm {
+  color:rgba(48,136,255,1);
+}
+.selector_item_container {
+  width: 100%;
+  max-height: 320px;
+  overflow-y: scroll;
+}
+.selector_item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 17px;
+}
+.selector_item_content {
+  display: flex;
+  height: 44px;
+  border-bottom: 1px solid #E6E6E6;
+  justify-content: space-between;
+  align-items: center;
+}
+.selector_item:last-child .selector_item_content {
+  border-bottom: none;
+}
+.selector_item_name {
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1)
+}
+.selector_isSelected_icon {
+  width: 13px;
+  height: auto;
+}
