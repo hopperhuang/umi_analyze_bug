@@ -10,6 +10,7 @@ class Index extends React.Component {
     for (let [key, value] of Object.entries(object1)) {
       console.log(`${key}: ${value}`);
     }
+    console.log(navigator)
     const width = 400
     const height = 250
     const windowWith = window.innerWidth
