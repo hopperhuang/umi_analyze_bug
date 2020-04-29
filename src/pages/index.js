@@ -3,6 +3,13 @@ import styles from './index.less';
 
 class Index extends React.Component {
   render () {
+    const object1 = {
+      a: 'somestring',
+      b: 42
+    };
+    for (let [key, value] of Object.entries(object1)) {
+      console.log(`${key}: ${value}`);
+    }
     const width = 400
     const height = 250
     const windowWith = window.innerWidth

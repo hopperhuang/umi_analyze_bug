@@ -20,41 +20,6 @@ export default {
     config.plugin('vconsole')
       .use(vConsolePlugin, [{ filter: [], enable: true }])
     // 自定义split-chunks 配置
-    config.merge({
-      optimization: {
-        splitChunks: {
-          cacheGroups: {
-            // antd, react, umi 等不会变动的缓存
-            commons: {
-              name: 'commons_1',
-              test: /[\\/]node_modules[\\/](react|react-dom|umi-hd|antd-mobile)[\\/]/,
-              priority: -5, // 一个模块可能属于多个 chunkGroup，这里是优先级，自定义的 group 是 0
-              chunks: 'all',
-              minChunks: 1,
-            },
-            // common: { // 这个不是默认的，我自己加的
-            //   filename: '[name].bundle.js', // chunks 为 initial 时有效。在 manifest 中最后会是 '[name].js': [name].bundle.js。在 umi 中该项默认值是 [name].async.js，webpack 默认值是 [name].js。
-            //   name: 'common', // 和 filename 的作用类似
-            //   chunks: 'initial',
-            //   minChunks: 1,
-            //   enforce: true, // 不管 maxInitialRequest maxAsyncRequests maxSize minSize 怎么样都会生成这个 chunk
-            // },
-            // node_modules 中少变动的缓存
-            vendors: {
-              test: /[\\/]node_modules[\\/]/, // test 符合这个规则的才会加到对应的 group 中
-              priority: -10, // 一个模块可能属于多个 chunkGroup，这里是优先级，自定义的 group 是 0
-              reuseExistingChunk: true
-            },
-            // 其他
-            default: {
-              minChunks: 2,
-              priority: -20,
-              reuseExistingChunk: true // 如果该chunk包含的modules都已经另一个被分割的chunk中存在，那么直接引用已存在的chunk，不会再重新产生一个
-            },
-          }
-        },
-      }
-    });
     // 打印config 配置
     // console.log(config.toString(), 'webpack-config')
   },
