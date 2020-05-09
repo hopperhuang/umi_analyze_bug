@@ -94,5 +94,7 @@ export default {
     }],
   ],
   extraPostCSSPlugins: [px2rem({ rootValue: 100 })],
-
+  extraBabelPlugins: [
+    "transform-es2017-object-entries"
+  ]
 }
