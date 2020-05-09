@@ -1,4 +1,5 @@
 import React from 'react'
+import { Modal } from 'antd-mobile';
 import styles from './index.less';
 
 class Index extends React.Component {
@@ -28,6 +29,7 @@ class Index extends React.Component {
         <div className={styles.half} >
           一半
         </div>
+        <Modal />
       </div>
     );
   }
